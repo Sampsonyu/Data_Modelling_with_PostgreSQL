@@ -26,6 +26,6 @@ After Running either of those etl files, you can run `test.ipynb` to check the v
 
 ## The Data Model: Star Schema
 
-![Star Schema](star_schema.png)
+![Star Schema](postgres_star_schema.png)
 
 For the sake of our Data Scientists, we've decided to use a Star Schema data model. The Star Schema is a subset of the concept of "fact and dimension tables". In our case, the Fact Table is `songplays` and our Dimension Tables are `users`, `songs`, `artists`, and `time`. 
