@@ -48,4 +48,4 @@ At the terminal:
 In IPython:
 
 1. ```run create_tables.py```
-2. ```run etl.py``
+2. ```run etl.py```
