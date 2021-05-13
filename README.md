@@ -11,6 +11,14 @@ To complete the project, you will need to
 * Define fact and dimension tables for a star schema for a particular analytic focus
 * Write an ETL pipeline that transfers data from files in two local directories into these tables in Postgres using Python and SQL
 
+## Prerequisites
+
+This project makes the folowing assumptions:
+
+* Python 3 is available
+* `pandas` and `psycopg2` are available
+* A PosgreSQL database is available on localhost
+
 ## File Overview
 - `data/song_data/` - contains our song data in json format. files are partitioned by the first three letters of each song's track ID
 - `data/log_data/` - contains our user activity logs in json format. files are partitioned by year and month
@@ -29,3 +37,15 @@ After Running either of those etl files, you can run `test.ipynb` to check the v
 ![Star Schema](postgres_star_schema.png)
 
 For the sake of our Data Scientists, we've decided to use a Star Schema data model. The Star Schema is a subset of the concept of "fact and dimension tables". In our case, the Fact Table is `songplays` and our Dimension Tables are `users`, `songs`, `artists`, and `time`. 
+
+## Running the Python Scripts
+
+At the terminal:
+
+1. ```python create_tables.py```
+2. ```python etl.py```
+
+In IPython:
+
+1. ```run create_tables.py```
+2. ```run etl.py``
